@@ -79,7 +79,7 @@ loafy-bakery/
 
 4. **Visit the site**
    ```
-   http://localhost:8000/html/index.html
+  https://aj-tech-24.github.io/loafy
    ```
 
 ## 📱 Pages
