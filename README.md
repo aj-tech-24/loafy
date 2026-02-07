@@ -27,7 +27,9 @@ A modern, responsive e-commerce website for a bakery business. Built with vanill
 
 ```
 loafy-bakery/
-├── assets/                 # Images and media files
+├── index.html             # Homepage (root)
+├── README.md
+├── assets/                # Images and media files
 │   ├── LOGO.png
 │   ├── bakery.mp4
 │   └── [product images]
@@ -37,14 +39,12 @@ loafy-bakery/
 │   ├── cart.css           # Cart page styles
 │   └── checkout.css       # Checkout page styles
 ├── html/
-│   ├── index.html         # Homepage
 │   ├── products.html      # Products catalog
 │   ├── cart.html          # Shopping cart
 │   └── checkout.html      # Checkout page
-├── js/
-│   ├── scripts.js         # Main JavaScript
-│   └── cart.js            # Cart functionality
-└── README.md
+└── js/
+    ├── scripts.js         # Main JavaScript
+    └── cart.js            # Cart functionality
 ```
 
 ## 🚀 Getting Started
@@ -67,7 +67,7 @@ loafy-bakery/
    ```
 
 3. **Open in browser**
-   - Option 1: Open `html/index.html` directly in your browser
+   - Option 1: Open `index.html` directly in your browser
    - Option 2: Use a local server like Live Server (VS Code extension)
    ```bash
    # Using Python
