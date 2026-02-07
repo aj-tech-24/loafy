@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loafy | Our Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/products.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="logo">
+            <a href="index.html"><img src="/assets/LOGO.png" alt="Loafy Logo"></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/html/cart.html">Cart</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Our Products</a>
+                    <div class="dropdown-content">
+                        <a href="#bread">Bread</a>
+                        <a href="#cake">Cake</a>
+                        <a href="#dessert">Dessert</a>
+                        <a href="#pastry">Pastry</a>
+                    </div>
+                </li>
+                <li class="search-container">
+                    <a href="javascript:void(0)" id="search-icon"><i class="fas fa-search"></i></a>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search for products...">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home2" class="hero">
+            <div class="hero-container">
+                <video autoplay muted loop playsinline id="background-video">
+                    <source src="/assets/bakery.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Freshly baked goods made with love</h3>
+                <h1>Our Delicious Menu</h1>
+            </div>
+        </section>
+        <section id="bread" class="section product-section">
+            <h2>Bread Products</h2>
+            <div class="product-container">
+                <!-- Container for expanded product details -->
+                <div id="product-details" class="product-details">
+                    <div class="details-content">
+                        <img id="details-img" src="" alt="">
+                        <h3 id="details-name"></h3>
+                        <p id="details-description"></p>
+                        <p id="details-price"></p>
+                        <button id="buy-now">Add to Cart</button>
+                        <button id="close-details">Close</button>
+                    </div>
+                </div>
+                <div id="product-success" class="product-success">
+                  <div class="add-fav">
+                    <i class="fa fa-check-circle fa-3x" style="color: green ;" aria-hidden="true"></i>
+                    <h2>Successfully added!</h2>
+                    <button id="back-bttn">Go Back</button>
+                  </div>
+                </div>
+                <!--bread products-->
+                <div class="product" data-name="Croissant" data-description="Flaky, buttery pastry with a golden brown crust." data-price="₱60.00">
+                  <img src="/assets/croissant.jpg" alt="Croissant">
+                  <h3>Croissant</h3>
+                  <p>Flaky, buttery pastry with a golden brown crust.</p>
+                  <p class="price">₱60.00</p>
+                </div>
+                
+                <div class="product" data-name="Bagel" data-description="Dense, chewy bread roll with a crisp exterior, available in various flavors." data-price="₱35.00">
+                  <img src="/assets/bagel.jpg" alt="Bagel">
+                  <h3>Bagel</h3>
+                  <p>Dense, chewy bread roll with a crisp exterior, available in various flavors.</p>
+                  <p class="price">₱35.00</p>
+                </div>
+                
+                <div class="product" data-name="Baguette" data-description="Long, thin loaf with a crispy crust and soft interior." data-price="₱55.00">
+                  <img src="/assets/baguette.jpg" alt="Baguette">
+                  <h3>Baguette</h3>
+                  <p>Long, thin loaf with a crispy crust and soft interior.</p>
+                  <p class="price">₱55.00</p>
+                </div>
+                
+                <div class="product" data-name="Sourdough" data-description="Tangy, crusty bread with a chewy crumb, made using natural yeast." data-price="₱80.00">
+                  <img src="/assets/sourdough.jpg" alt="Sourdough">
+                  <h3>Sourdough</h3>
+                  <p>Tangy, crusty bread with a chewy crumb, made using natural yeast.</p>
+                  <p class="price">₱80.00</p>
+                </div>
+                
+                <div class="product" data-name="Brioche" data-description="Rich, tender bread with a slightly sweet flavor and soft texture." data-price="₱70.00">
+                  <img src="/assets/brioche.jpeg" alt="Brioche">
+                  <h3>Brioche</h3>
+                  <p>Rich, tender bread with a slightly sweet flavor and soft texture.</p>
+                  <p class="price">₱70.00</p>
+                </div>
+                
+                <div class="product" data-name="Focaccia" data-description="Italian flatbread topped with olive oil and herbs." data-price="₱65.00">
+                  <img src="/assets/focaccia.jpg" alt="Focaccia">
+                  <h3>Focaccia</h3>
+                  <p>Italian flatbread topped with olive oil and herbs.</p>
+                  <p class="price">₱65.00</p>
+                </div>
+                
+                <div class="product" data-name="Ciabatta" data-description="Rustic Italian bread with a crispy crust and airy crumb." data-price="₱50.00">
+                  <img src="/assets/ciabatta.jpeg" alt="Ciabatta">
+                  <h3>Ciabatta</h3>
+                  <p>Rustic Italian bread with a crispy crust and airy crumb.</p>
+                  <p class="price">₱50.00</p>
+                </div>
+            </div>
+        </section>
+        <section id="cake" class="section product-section">
+            <h2>Cake Products</h2>
+            <div class="product-container">
+                <div class="product" data-name="Chocolate Cake" data-description="Rich and moist chocolate cake topped with creamy chocolate frosting." data-price="₱120.00">
+                  <img src="/assets/chocolate_cake.jpg" alt="Chocolate Cake">
+                  <h3>Chocolate Cake</h3>
+                  <p>Rich and moist chocolate cake topped with creamy chocolate frosting.</p>
+                  <p class="price">₱120.00</p>
+                </div>
+                
+                <div class="product" data-name="Cheesecake" data-description="Smooth and creamy cheesecake with a graham cracker crust." data-price="₱150.00">
+                  <img src="/assets/cheesecake.jpg" alt="Cheesecake">
+                  <h3>Cheesecake</h3>
+                  <p>Smooth and creamy cheesecake with a graham cracker crust.</p>
+                  <p class="price">₱150.00</p>
+                </div>
+                
+                <div class="product" data-name="Red Velvet Cake" data-description="Moist red velvet cake with layers of cream cheese frosting." data-price="₱130.00">
+                  <img src="/assets/red_velvet_cake.jpg" alt="Red Velvet Cake">
+                  <h3>Red Velvet Cake</h3>
+                  <p>Moist red velvet cake with layers of cream cheese frosting.</p>
+                  <p class="price">₱130.00</p>
+                </div>
+                
+                <div class="product" data-name="Carrot Cake" data-description="Spiced carrot cake with cream cheese frosting and chopped nuts." data-price="₱110.00">
+                  <img src="/assets/carrot_cake.jpg" alt="Carrot Cake">
+                  <h3>Carrot Cake</h3>
+                  <p>Spiced carrot cake with cream cheese frosting and chopped nuts.</p>
+                  <p class="price">₱110.00</p>
+                </div>
+                
+                <div class="product" data-name="Lemon Cake" data-description="Light and fluffy lemon cake with a tangy lemon glaze." data-price="₱100.00">
+                  <img src="/assets/lemon_cake.jpg" alt="Lemon Cake">
+                  <h3>Lemon Cake</h3>
+                  <p>Light and fluffy lemon cake with a tangy lemon glaze.</p>
+                  <p class="price">₱100.00</p>
+                </div>
+                
+                <div class="product" data-name="Vanilla Cake" data-description="Classic vanilla cake with layers of buttercream frosting." data-price="₱110.00">
+                  <img src="/assets/vanilla_cake.jpg" alt="Vanilla Cake">
+                  <h3>Vanilla Cake</h3>
+                  <p>Classic vanilla cake with layers of buttercream frosting.</p>
+                  <p class="price">₱110.00</p>
+                </div>
+                
+                <div class="product" data-name="Black Forest Cake" data-description="Chocolate sponge cake with cherries and whipped cream." data-price="₱140.00">
+                  <img src="/assets/black_forest_cake.jpg" alt="Black Forest Cake">
+                  <h3>Black Forest Cake</h3>
+                  <p>Chocolate sponge cake with cherries and whipped cream.</p>
+                  <p class="price">₱140.00</p>
+                </div>
+                <!-- Add more cake products here -->
+            </div>
+        </section>
+        <section id="dessert" class="section product-section">
+            <h2>Dessert Products</h2>
+            <div class="product-container">
+                <div class="product" data-name="Tiramisu" data-description="Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cheese." data-price="₱130.00">
+                  <img src="/assets/tiramisu.jpg" alt="Tiramisu">
+                  <h3>Tiramisu</h3>
+                  <p>Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cheese.</p>
+                  <p class="price">₱130.00</p>
+                </div>
+                
+                <div class="product" data-name="Panna Cotta" data-description="Creamy Italian dessert topped with a sweet fruit sauce." data-price="₱90.00">
+                  <img src="/assets/panna_cotta.jpg" alt="Panna Cotta">
+                  <h3>Panna Cotta</h3>
+                  <p>Creamy Italian dessert topped with a sweet fruit sauce.</p>
+                  <p class="price">₱90.00</p>
+                </div>
+                
+                <div class="product" data-name="Crème Brûlée" data-description="Rich custard base topped with a layer of hardened caramelized sugar." data-price="₱110.00">
+                  <img src="/assets/creme_brulee.jpg" alt="Crème Brûlée">
+                  <h3>Crème Brûlée</h3>
+                  <p>Rich custard base topped with a layer of hardened caramelized sugar.</p>
+                  <p class="price">₱110.00</p>
+                </div>
+                
+                <div class="product" data-name="Pavlova" data-description="Crispy meringue shell topped with whipped cream and fresh fruits." data-price="₱100.00">
+                  <img src="/assets/pavlova.jpg" alt="Pavlova">
+                  <h3>Pavlova</h3>
+                  <p>Crispy meringue shell topped with whipped cream and fresh fruits.</p>
+                  <p class="price">₱100.00</p>
+                </div>
+                <div class="product" data-name="Mousse" data-description="Light and airy dessert, available in various flavors like chocolate, coffee, and fruit." data-price="₱80.00">
+                  <img src="/assets/mousse.jpg" alt="Mousse">
+                  <h3>Mousse</h3>
+                  <p>Light and airy dessert, available in various flavors like chocolate, coffee, and fruit.</p>
+                  <p class="price">₱80.00</p>
+                </div>
+                
+                <div class="product" data-name="Brownie" data-description="Rich and fudgy chocolate brownie, perfect for any chocolate lover." data-price="₱60.00">
+                  <img src="/assets/brownie.jpg" alt="Brownie">
+                  <h3>Brownie</h3>
+                  <p>Rich and fudgy chocolate brownie, perfect for any chocolate lover.</p>
+                  <p class="price">₱60.00</p>
+                </div>
+                
+                <div class="product" data-name="Fruit Tart" data-description="Crispy tart shell filled with creamy custard and topped with fresh fruits." data-price="₱120.00">
+                  <img src="/assets/fruit_tart.jpg" alt="Fruit Tart">
+                  <h3>Fruit Tart</h3>
+                  <p>Crispy tart shell filled with creamy custard and topped with fresh fruits.</p>
+                  <p class="price">₱120.00</p>
+                </div>
+                
+                <div class="product" data-name="Macarons" data-description="Delicate French cookies with a crisp shell and soft, chewy center, available in various flavors." data-price="₱150.00">
+                  <img src="/assets/macarons.jpg" alt="Macarons">
+                  <h3>Macarons</h3>
+                  <p>Delicate French cookies with a crisp shell and soft, chewy center, available in various flavors.</p>
+                  <p class="price">₱150.00</p>
+                </div>
+                
+                <div class="product" data-name="Gelato" data-description="Italian-style ice cream, smooth and dense, available in various flavors." data-price="₱70.00">
+                  <img src="/assets/gelato.jpg" alt="Gelato">
+                  <h3>Gelato</h3>
+                  <p>Italian-style ice cream, smooth and dense, available in various flavors.</p>
+                  <p class="price">₱70.00</p>
+                </div>
+
+                <!-- Add more dessert products here -->
+            </div>
+        </section>
+        <section id="pastry" class="section product-section">
+            <h2>Pastry Products</h2>
+            <div class="product-container">
+                <div class="product" data-name="Apple Turnover" data-description="Flaky pastry filled with spiced apple filling." data-price="₱50.00">
+                  <img src="/assets/apple_turnover.jpg" alt="Apple Turnover">
+                  <h3>Apple Turnover</h3>
+                  <p>Flaky pastry filled with spiced apple filling.</p>
+                  <p class="price">₱50.00</p>
+                </div>
+                
+                <div class="product" data-name="Cinnamon Roll" data-description="Soft, sweet roll swirled with cinnamon and topped with icing." data-price="₱55.00">
+                  <img src="/assets/cinnamon_roll.jpg" alt="Cinnamon Roll">
+                  <h3>Cinnamon Roll</h3>
+                  <p>Soft, sweet roll swirled with cinnamon and topped with icing.</p>
+                  <p class="price">₱55.00</p>
+                </div>
+                
+                <div class="product" data-name="Danish Pastry" data-description="Light and flaky pastry filled with custard, fruit, or cream cheese." data-price="₱60.00">
+                  <img src="/assets/danish_pastry.jpg" alt="Danish Pastry">
+                  <h3>Danish Pastry</h3>
+                  <p>Light and flaky pastry filled with custard, fruit, or cream cheese.</p>
+                  <p class="price">₱60.00</p>
+                </div>
+                
+                <div class="product" data-name="Pain au Chocolat" data-description="Buttery pastry with a rich chocolate filling." data-price="₱70.00">
+                  <img src="/assets/pain_au_chocolat.jpg" alt="Pain au Chocolat">
+                  <h3>Pain au Chocolat</h3>
+                  <p>Buttery pastry with a rich chocolate filling.</p>
+                  <p class="price">₱70.00</p>
+                </div>
+                
+                <div class="product" data-name="Almond Croissant" data-description="Flaky croissant filled with almond paste and topped with sliced almonds." data-price="₱80.00">
+                  <img src="/assets/almond_croissant.jpg" alt="Almond Croissant">
+                  <h3>Almond Croissant</h3>
+                  <p>Flaky croissant filled with almond paste and topped with sliced almonds.</p>
+                  <p class="price">₱80.00</p>
+                </div>
+                
+                <div class="product" data-name="Palmiers" data-description="Crispy, buttery pastry in a palm leaf shape, coated with sugar." data-price="₱45.00">
+                  <img src="/assets/palmiers.jpg" alt="Palmiers">
+                  <h3>Palmiers</h3>
+                  <p>Crispy, buttery pastry in a palm leaf shape, coated with sugar.</p>
+                  <p class="price">₱45.00</p>
+                </div>
+                
+                <div class="product" data-name="Profiteroles" data-description="Choux pastry balls filled with cream and topped with chocolate sauce." data-price="₱65.00">
+                  <img src="/assets/profiteroles.jpg" alt="Profiteroles">
+                  <h3>Profiteroles</h3>
+                  <p>Choux pastry balls filled with cream and topped with chocolate sauce.</p>
+                  <p class="price">₱65.00</p>
+                </div>
+                <!-- Add more pastry products here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Loafy. All rights reserved.</p>
+    </footer>
+        <button id="back-to-top-btn" title="Go to top">&#8679;</button>
+    <script>
+    document.querySelectorAll('.product').forEach(product => {
+        product.addEventListener('click', function() {
+            const imgSrc = this.querySelector('img').src;
+            const name = this.getAttribute('data-name');
+            const description = this.getAttribute('data-description');
+            const price = this.querySelector('.price').textContent;
+
+            document.getElementById('details-img').src = imgSrc;
+            document.getElementById('details-name').textContent = name;
+            document.getElementById('details-description').textContent = description;
+            document.getElementById('details-price').textContent = price;
+
+            document.getElementById('product-details').style.display = 'flex';
+        });
+    });
+
+    document.getElementById('close-details').addEventListener('click', function() {
+        document.getElementById('product-details').style.display = 'none';
+    });
+    
+    document.getElementById('buy-now').addEventListener('click', function() {
+        const imgSrc = document.getElementById('details-img').src;
+        const name = document.getElementById('details-name').textContent;
+        const description = document.getElementById('details-description').textContent;
+        const price = document.getElementById('details-price').textContent;
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ imgSrc, name, description, price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+       document.getElementById('product-details').style.display = 'none';
+       document.getElementById('product-success').style.display = 'flex';
+
+    });
+
+    document.getElementById('back-bttn').addEventListener('click',function(){
+      document.getElementById('product-success').style.display = 'none';
+    });
+
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('nav').classList.toggle('active');
+    });
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                document.querySelector('main').style.opacity = '0';
+
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    document.querySelector('main').style.opacity = '1';
+                }, 200);
+            }
+        });
+    });
+
+    document.getElementById('search-icon').addEventListener('click', function() {
+        document.querySelector('.search-container').classList.toggle('active');
+        document.getElementById('search-input').focus();
+    });
+
+    document.getElementById('search-input').addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        document.querySelectorAll('.product').forEach(product => {
+            const name = product.getAttribute('data-name').toLowerCase();
+            const description = product.getAttribute('data-description').toLowerCase();
+            if (name.includes(query) || description.includes(query)) {
+                product.classList.add('show');
+            } else {
+                product.classList.remove('show');
+            }
+        });
+    });
+    
+    // Get the button
+    let mybutton = document.getElementById("back-to-top-btn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() { scrollFunction() };
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 240) {
+        mybutton.style.display = "block";
+        setTimeout(() => {
+          mybutton.classList.add('show');
+          mybutton.classList.remove('hide');
+        }, 10); // small delay to ensure display:block is set
+      } else {
+        mybutton.classList.add('hide');
+        mybutton.classList.remove('show');
+        setTimeout(() => {
+          mybutton.style.display = "none";
+        }, 500); // match the transition duration
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.onclick = function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scroll animation
+      });
+    }
+    
+
+    </script>
+</body>
+</html>

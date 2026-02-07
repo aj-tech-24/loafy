@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loafy | Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="logo">
+            <a href="index.html"><img src="/assets/LOGO.png" alt="Loafy Logo"></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Our Products</a>
+                    <div class="dropdown-content">
+                        <a href="products.html#bread">Bread</a>
+                        <a href="products.html#cake">Cake</a>
+                        <a href="products.html#dessert">Dessert</a>
+                        <a href="products.html#pastry">Pastry</a>
+                    </div>
+                </li>
+                <li class="search-container">
+                    <a href="javascript:void(0)" id="search-icon"><i class="fas fa-search"></i></a>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search for products...">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        </div>
+        <section id="cart" class="section cart-section">
+            <h2>Your Cart</h2>
+            <div class="cart-container">
+                <div id="cart-items"></div>
+                <p id="cart-total"></p>
+                <button id="checkout">Proceed to checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loafy. All rights reserved.</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const updateCart = () => {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.imgSrc}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p>${item.description}</p>
+                    <p class="price">${item.price}</p>
+                    <button class="remove-item" data-index="${index}">Remove</button>
+                `;
+                cartItems.appendChild(itemElement);
+                total += parseFloat(item.price.substring(1));
+            });
+
+            document.getElementById('cart-total').textContent = `Total: ₱${total.toFixed(2)}`;
+        };
+
+        document.getElementById('cart-items').addEventListener('click', (event) => {
+            if (event.target.classList.contains('remove-item')) {
+                const index = event.target.getAttribute('data-index');
+                cart.splice(index, 1);
+                updateCart();
+            }
+        });
+
+        if (document.getElementById('cart-items')) {
+            updateCart();
+        }
+
+        document.getElementById('checkout').addEventListener('click', () => {
+            window.location.href = "checkout.html";
+        });
+
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav').classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+
+                    const target = document.querySelector(this.getAttribute('href'));
+                    document.querySelector('main').style.opacity = '0';
+
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        document.querySelector('main').style.opacity = '1';
+                    }, 200);
+                }
+            });
+        });
+
+        document.getElementById('search-icon').addEventListener('click', function() {
+            document.querySelector('.search-container').classList.toggle('active');
+            document.getElementById('search-input').focus();
+        });
+
+        document.getElementById('search-input').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            document.querySelectorAll('.product').forEach(product => {
+                const name = product.getAttribute('data-name').toLowerCase();
+                const description = product.getAttribute('data-description').toLowerCase();
+                if (name.includes(query) || description.includes(query)) {
+                    product.classList.add('show');
+                } else {
+                    product.classList.remove('show');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
