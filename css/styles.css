@@ -118,8 +118,6 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, rgba(201, 168, 124, 0.1) 0%, rgba(139, 115, 85, 0.1) 100%),
-                url("../assets/hombg.jpeg");
     background-size: cover;
     background-position: center;        
     background-attachment: fixed;
